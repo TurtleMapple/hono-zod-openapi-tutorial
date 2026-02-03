@@ -2,14 +2,17 @@
 	"name": "zod-open-api",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "tsx watch src/index.ts",
-		"start": "tsx src/index.ts"
+		"dev": "tsx watch src/server.ts",
+		"start": "tsx src/server.ts",
+		"build": "tsc",
+		"preview": "node dist/server.js"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.12.0",
 		"@hono/zod-openapi": "^1.2.0",
 		"@scalar/hono-api-reference": "^0.9.39",
 		"@types/node": "^25.2.0",
+		"dotenv": "^17.2.3",
 		"hono": "^4.11.7",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
