@@ -44,5 +44,16 @@ export const responses = {
             content: { 'application/json': { schema: ErrorResponseSchema } },
             description,
         }
+    }),
+
+    unauthorized: (description: string = 'Unauthorized') => ({
+        401: {
+            content: { 'application/json': { schema: ErrorResponseSchema } },
+            description,
+        }
     })
+}
+
+export const errorResponse = {
+    unauthorized: (c: any) => c.json({ message: 'Invalid Credential' }, 401),
 }
